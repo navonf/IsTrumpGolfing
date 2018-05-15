@@ -8,7 +8,21 @@ import twitter
 import lxml
 import pyrebase
 
+config = {
+  "apiKey": "AIzaSyB9f7U74SAIXULRwDlNfN98HkbJ332-bQQ",
+  "authDomain": "trumpbot-345fd.firebaseapp.com",
+  "databaseURL": "https://trumpbot-345fd.firebaseio.com",
+  "storageBucket": "trumpbot-345fd.appspot.com"
+}
+firebase = pyrebase.initialize_app(config)
+db = firebase.database()
 
+api = twitter.Api(
+    consumer_key='B2eoLT9FDDWE5CkSUCaTOk9jc',                               # Consumer Key (API Key)
+    consumer_secret='MNMQQvPVCrIqkscUgRTsOmT0inXQiI3kbuJAjDrh66hbwVW93z',   # Consumer Secret (API Secret)
+    access_token_key='994313959934234629-bPOds39rZrf53heJRlmB1YKpnEq4YdG',  # Acess Token
+    access_token_secret='RxO69a6Woo5qHYxW9G3277Jo4OGghd7n7xqMLsFX5AIDu')    # Access Token Secret
+    
 def main():
     get_latest_outing()
 
